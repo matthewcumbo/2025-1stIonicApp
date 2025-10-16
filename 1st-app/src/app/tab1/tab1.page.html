@@ -1,3 +1,4 @@
+<!-- This section builds the header for Android devices -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
@@ -6,12 +7,90 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- This section builds the header for Apple devices -->
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Tab 1</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  
+  <!-- This line uses a custom component, we will be talking about this later on -->
+  <!-- I commented it out since we do not need it in this example -->
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+  
+  
+  <ion-list>
+    <ion-item>
+      <ion-card color="primary" size="full">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card color="secondary">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card color="tertiary">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+        
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card color="success">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+        
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card color="warning">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+        
+      </ion-card>
+    </ion-item>
+    <ion-item>
+      <ion-card color="danger">
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        
+        <ion-card-content> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi et corrupti, incidunt in nemo esse aliquid aut cum reiciendis quod nihil veniam neque tenetur blanditiis consectetur repudiandae! Deleniti, repellat commodi! </ion-card-content>
+        
+      </ion-card>
+    </ion-item>
+  </ion-list>
+  
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="dark">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
 </ion-content>
