@@ -2,6 +2,8 @@
 This is the first Ionic App repository created for the 2025 INT-5.2 class. 
 Here you will find notes on the very basics for this unit. More instructions can be found as inline comments within the project itself. 
 
+*Note:* Ionic documentation can be found here: https://ionicframework.com/docs
+
 ## Lecture 1 
 First make sure to install Node JS, Angular, and Ionic (Homebrew should be used if you use a macbook)
 
@@ -45,3 +47,67 @@ First make sure to install Node JS, Angular, and Ionic (Homebrew should be used 
 - If this does not happen, check Terminal, it should show an IP address of the local server created
 - You can copy that into the browser to show the app 
 
+## Lecture 2
+### Adding a new page
+- Within Terminal/CMD, make sure that you are set in the correct folder (of the app, not the repo), and use the generate function of Ionic
+    - ionic generate page pageName
+- Once the page is created, in its TS file, make sure to specify that it is not standalone
+```
+@Component({
+selector: 'app-tab2',
+templateUrl: 'tab2.page.html',
+styleUrls: ['tab2.page.scss'],
+standalone: false
+})
+```
+### Adding a new tab
+To add a new tab in an app using the tabs template, start off by creating a new page. Then, set up the routing for it. 
+- Remove standard routing in the app routing module
+```
+{
+    path: 'tab4',
+    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+}
+```
+- Add a new route in the tabs routing module
+```
+{
+    path: 'tab4',
+    loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
+},
+```
+### Interpolation
+Similar to JS, we can create properties to hold data in the TS file of a page within the exported class
+```
+name = "Matthew";
+```
+Then, we can access this property in our HTML
+```
+{{name}}
+```
+We can also have objects, with their own properties
+```
+ person = {
+    name:"Matthew",
+    surname:"Cumbo",
+    age:33
+  }
+```
+We can then access values of the properties of that object in HTML 
+```
+<ion-col>
+    <ion-text>
+      {{person2.name}}
+    </ion-text>
+    </ion-col>
+    <ion-col>
+    <ion-text>
+      {{person2.surname}}
+    </ion-text>
+    </ion-col>
+    <ion-col>
+    <ion-text>
+      {{person2.age}}
+    </ion-text>
+</ion-col>
+```
