@@ -8,6 +8,26 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
+  header = "Capital Cities"
+  list = [
+    {
+      country:"Malta",
+      city:"Valletta"
+    },
+    {
+      country:"England",
+      city:"London"
+    },
+    {
+      country:"Italy",
+      city:"Rome"
+    },
+    {
+      country:"France",
+      city:"Paris"
+    }
+  ]
+
   constructor() {}
 
 }

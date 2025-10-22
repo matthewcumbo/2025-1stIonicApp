@@ -111,3 +111,34 @@ We can then access values of the properties of that object in HTML
     </ion-text>
 </ion-col>
 ```
+
+### Arrays
+Data can be also stored in list form through arrays
+- Arrays can also have objects in them
+
+```
+list = [
+    {
+    country:"Malta",
+    city:"Valletta"
+    },
+    {
+    country:"England",
+    city:"London"
+    },
+    {
+    country:"Italy",
+    city:"Rome"
+    },
+    {
+    country:"France",
+    city:"Paris"
+    }
+]
+```
+
+To access data from objects in arrays, we can do the following:
+```
+<h1>{{list[0].country}}</h1>
+<p>{{list[0].city}}</p>
+```
