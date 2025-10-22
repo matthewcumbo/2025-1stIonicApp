@@ -13,5 +13,104 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!-- <app-explore-container name="Tab 2 page"></app-explore-container> -->
+
+  <!-- The below is a simple example of a grid, which works like a basic HTML table -->
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 1
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          Row 1 - Col 2
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <!-- The size attribute can be used like the Bootstrap sizes -->
+      <ion-col size="6">
+        1
+      </ion-col>
+      <ion-col>
+        2
+      </ion-col>
+      <ion-col>
+        3
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <!-- 
+            This is interpolation, 
+            which can access the value of a property from the TS file of the page 
+          -->
+          {{first}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{second}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text class="tableHeader">
+          Name
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="tableHeader">
+          Surname
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text class="tableHeader">
+          Age
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <!-- Interpolation can also be used to access values of properties in object -->
+          {{person.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-text>
+          <!-- Interpolation can also be used to access values of properties in object -->
+          {{person2.name}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.surname}}
+        </ion-text>
+      </ion-col>
+      <ion-col>
+        <ion-text>
+          {{person2.age}}
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
 </ion-content>
