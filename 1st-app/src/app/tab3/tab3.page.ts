@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  header = "Capital Cities"
+  header = "Capital Cities";
   list = [
     {
       country:"Malta",
@@ -26,7 +26,7 @@ export class Tab3Page {
       country:"France",
       city:"Paris"
     }
-  ]
+  ];
 
   constructor() {}
 
