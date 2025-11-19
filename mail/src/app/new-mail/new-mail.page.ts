@@ -13,4 +13,8 @@ export class NewMailPage implements OnInit {
   ngOnInit() {
   }
 
+  submitNewEmail(){
+    
+  }
+
 }
