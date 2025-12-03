@@ -21,9 +21,13 @@ export class FolderPage implements OnInit {
 
   ngOnInit() {
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
+    this.folder = this.folder[0].toUpperCase()+this.folder.slice(1);
+    this.mailService.filterEmails(this.folder);
+
     this.statusList = this.mailService.statusList;
     this.iconList = this.mailService.iconList;
-    this.emailList = this.mailService.emailList;
+    this.emailList = this.mailService.filteredEmailList;
+
   }
 
   newMessage(){

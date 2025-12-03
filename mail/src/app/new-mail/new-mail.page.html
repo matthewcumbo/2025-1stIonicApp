@@ -12,29 +12,37 @@
   </ion-header>
 
 
-  <form>
+  <form [formGroup]="fg" (ngSubmit)="submitNewEmail();">
     <ion-list>
       <ion-item>
         <ion-label color="secondary" class="ion-padding">Subject</ion-label>
-        <ion-input></ion-input>
+        <ion-input formControlName="subject"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="secondary" class="ion-padding">From</ion-label>
-        <ion-input></ion-input>
+        <ion-input formControlName="from"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="secondary" class="ion-padding">From Name</ion-label>
-        <ion-input></ion-input>
+        <ion-input formControlName="fromName"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label color="secondary" class="ion-padding">Message</ion-label>
-        <ion-input></ion-input>
+        <ion-input formControlName="message"></ion-input>
       </ion-item>
     </ion-list>
-    <ion-button expand="block" class="ion-padding">Send</ion-button>
+    <ion-button expand="block" class="ion-padding" type="submit">Send</ion-button>
   </form>
 
 
+
+  <ion-toast
+  message="Message sent."
+  [duration]="5000"
+  [isOpen]="isToastOpen"
+  (didDismiss)="setOpen(false)"
+  >
+  </ion-toast>
 
 
 </ion-content>
