@@ -284,5 +284,14 @@ export class Mail {
     });
   }
 
+  setStatus(emailId:number,statusId:number){
+    // console.log("emailId:"+emailId+". statusId:"+statusId);
+
+    this.emailList.find(x => x.id == emailId).status = statusId;
+    this.emailList.find(y => y.id == emailId).icon = statusId;
+
+  }
+
+
 
 }

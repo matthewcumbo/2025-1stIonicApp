@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'new-mail',
     loadChildren: () => import('./new-mail/new-mail.module').then( m => m.NewMailPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   }
 ];
 
