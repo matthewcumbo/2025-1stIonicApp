@@ -12,7 +12,7 @@
   </ion-header>
 
   <ion-item lines="none" *ngIf="username != ''">
-    <ion-text>Hello {{name}} {{surname}} ({{username}})</ion-text>
+    <ion-text class="mainColor">Hello {{name}} {{surname}} ({{username}})</ion-text>
   </ion-item>
 
   <form (ngSubmit)="save();" [formGroup]="fg">
@@ -25,6 +25,11 @@
       </ion-item>
       <ion-item>
         <ion-input label="Last name" placeholder="Borg" formControlName="surname"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select label="Theme" formControlName="theme">
+          <ion-select-option *ngFor="let t of themes" value="{{t.id}}">{{t.name}}</ion-select-option>
+        </ion-select>
       </ion-item>
     </ion-list>
 
